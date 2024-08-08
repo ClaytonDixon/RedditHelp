@@ -1,0 +1,148 @@
+I ran this command
+logrotate -vf /etc/logrotate.conf &> /etc/logOutput.txt
+
+
+reading config file /etc/logrotate.conf
+including /etc/logrotate.d
+reading config file ConsoleKit
+reading config info for /var/log/ConsoleKit/
+reading config file cups
+reading config info for /var/log/cups/*_log
+reading config file dracut
+reading config info for /var/log/dracut.log
+reading config file httpd
+reading config info for /var/log/httpd/*log
+reading config file mcelog
+reading config info for /var/log/mcelog
+reading config file numad
+reading config info for /var/log/numad.log
+reading config file psacct
+reading config info for /var/account/pacct
+reading config file sssd
+reading config info for /var/log/sssd/*.log
+reading config file syslog
+reading config info for /var/log/cron
+/var/log/maillog
+/var/log/messages
+/var/log/secure
+/var/log/spooler
+
+reading config file yum
+reading config info for /var/log/yum.log
+reading config info for /var/log/wtmp
+reading config info for /var/log/btmp
+Handling 12 logs
+
+rotating pattern: /var/log/ConsoleKit/history  forced from command line (6 rota$
+empty log files are not rotated, old logs are removed
+considering log /var/log/ConsoleKit/history
+  log does not need rotating
+
+rotating pattern: /var/log/cups/*_log  forced from command line (4 rotations)
+empty log files are not rotated, old logs are removed
+considering log /var/log/cups/access_log
+  log does not need rotating
+considering log /var/log/cups/error_log
+  log does not need rotating
+considering log /var/log/cups/page_log
+  log does not need rotating
+
+rotating pattern: /var/log/dracut.log  forced from command line (4 rotations)
+empty log files are not rotated, old logs are removed
+considering log /var/log/dracut.log
+  log does not need rotating
+rotating pattern: /var/log/httpd/*log  forced from command line (4 rotations)
+empty log files are not rotated, old logs are removed
+considering log /var/log/httpd/access_log
+  log does not need rotating
+considering log /var/log/httpd/error_log
+  log needs rotating
+rotating log /var/log/httpd/error_log, log->rotateCount is 4
+dateext suffix '-20240808'
+glob pattern '-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+destination /var/log/httpd/error_log-20240808 already exists, skipping rotation
+
+rotating pattern: /var/log/mcelog  forced from command line (99 rotations)
+empty log files are not rotated, old logs are removed
+considering log /var/log/mcelog
+  log does not need rotating
+not running postrotate script, since no logs were rotated
+
+rotating pattern: /var/log/numad.log  forced from command line (5 rotations)
+empty log files are rotated, old logs are removed
+considering log /var/log/numad.log
+  log /var/log/numad.log does not exist -- skipping
+
+rotating pattern: /var/account/pacct  forced from command line (31 rotations)
+empty log files are not rotated, old logs are removed
+considering log /var/account/pacct
+  log does not need rotating
+not running postrotate script, since no logs were rotated
+
+rotating pattern: /var/log/sssd/*.log  forced from command line (2 rotations)
+empty log files are not rotated, old logs are removed
+considering log /var/log/sssd/*.log
+  log /var/log/sssd/*.log does not exist -- skipping
+not running postrotate script, since no logs were rotated
+
+rotating pattern: /var/log/cron
+/var/log/maillog
+/var/log/messages
+/var/log/secure
+/var/log/spooler
+ forced from command line (4 rotations)
+empty log files are rotated, old logs are removed
+considering log /var/log/cron
+  log needs rotating
+considering log /var/log/maillog
+  log needs rotating
+considering log /var/log/messages
+  log needs rotating
+considering log /var/log/secure
+  log needs rotating
+considering log /var/log/spooler
+  log needs rotating
+rotating log /var/log/cron, log->rotateCount is 4
+dateext suffix '-20240808'
+glob pattern '-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+destination /var/log/cron-20240808 already exists, skipping rotation
+rotating log /var/log/maillog, log->rotateCount is 4
+dateext suffix '-20240808'
+glob pattern '-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+destination /var/log/maillog-20240808 already exists, skipping rotation
+rotating log /var/log/messages, log->rotateCount is 4
+dateext suffix '-20240808'
+glob pattern '-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+destination /var/log/messages-20240808 already exists, skipping rotation
+rotating log /var/log/secure, log->rotateCount is 4
+dateext suffix '-20240808'
+glob pattern '-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+destination /var/log/secure-20240808 already exists, skipping rotation
+rotating log /var/log/spooler, log->rotateCount is 4
+dateext suffix '-20240808'
+glob pattern '-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+destination /var/log/spooler-20240808 already exists, skipping rotation
+
+rotating pattern: /var/log/yum.log  forced from command line (4 rotations)
+empty log files are not rotated, old logs are removed
+considering log /var/log/yum.log
+  log does not need rotating
+
+rotating pattern: /var/log/wtmp  forced from command line (1 rotations)
+empty log files are rotated, only log files >= 1048576 bytes are rotated, old logs are removed
+considering log /var/log/wtmp
+  log needs rotating
+rotating log /var/log/wtmp, log->rotateCount is 1
+dateext suffix '-20240808'
+glob pattern '-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+destination /var/log/wtmp-20240808 already exists, skipping rotation
+
+rotating pattern: /var/log/btmp  forced from command line (1 rotations)
+empty log files are rotated, old logs are removed
+considering log /var/log/btmp
+  log needs rotating
+rotating log /var/log/btmp, log->rotateCount is 1
+dateext suffix '-20240808'
+glob pattern '-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+destination /var/log/btmp-20240808 already exists, skipping rotation
+set default create context
